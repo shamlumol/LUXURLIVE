@@ -1,0 +1,201 @@
+:root {
+  color-scheme: dark;
+  --bg-color: #111111;
+  --surface-color: #1a1a1a;
+  --stone-color: #8f8a84;
+  --ivory-color: #fdfbf7;
+  --accent-color: #d6c5b3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--ivory-color);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  border-radius: 0px !important;
+}
+
+/* Typography Utilities */
+.text-display {
+  font-size: 4rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.text-heading {
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.text-body {
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+.text-label {
+  font-size: 0.75rem;
+  line-height: 1;
+  letter-spacing: 0.15em;
+}
+
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.text-stone {
+  color: var(--stone-color) !important;
+}
+
+.text-ivory {
+  color: var(--ivory-color) !important;
+}
+
+.bg-background {
+  background-color: var(--bg-color) !important;
+}
+
+.tracking-wide {
+  letter-spacing: 0.05em;
+}
+
+.tracking-widest {
+  letter-spacing: 0.15em;
+}
+
+/* Borders */
+.thin-border {
+  border: 1px solid rgba(143, 138, 132, 0.2) !important;
+}
+
+.border-b-thin {
+  border-bottom: 1px solid rgba(143, 138, 132, 0.2) !important;
+}
+
+.border-r-thin {
+  border-right: 1px solid rgba(143, 138, 132, 0.2) !important;
+}
+
+/* Architectural Panels */
+.architectural-panel {
+  background: rgba(26, 26, 26, 0.4);
+  border: 1px solid rgba(143, 138, 132, 0.2);
+  transition: all 0.5s ease;
+}
+
+.architectural-panel.active {
+  background: rgba(26, 26, 26, 0.8);
+  border-color: rgba(143, 138, 132, 0.5);
+}
+
+.architectural-panel:hover {
+  border-color: rgba(143, 138, 132, 0.4);
+}
+
+/* Animations */
+.image-overlay {
+  background: linear-gradient(to right, rgba(17,17,17,0.7) 0%, rgba(17,17,17,0.1) 40%, rgba(17,17,17,0) 100%),
+              linear-gradient(to top, rgba(17,17,17,0.9) 0%, rgba(17,17,17,0) 30%);
+}
+
+.animate-slow-fade {
+  animation: fade 1s ease-in-out;
+}
+
+.animate-image-pan {
+  animation: pan 20s infinite alternate ease-in-out;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes pan {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+/* Custom Overrides */
+.grayscale {
+  filter: grayscale(100%);
+}
+.grayscale:hover {
+  filter: grayscale(0%);
+}
+.hover-opacity-70:hover {
+  opacity: 0.7;
+}
+.pointer-events-none {
+  pointer-events: none;
+}
+.pointer-events-auto {
+  pointer-events: auto;
+}
+.object-cover {
+  object-fit: cover;
+}
+.vh-100 {
+  height: 100vh;
+}
+.z-50 {
+  z-index: 50;
+}
+.z-20 {
+  z-index: 20;
+}
+.z-10 {
+  z-index: 10;
+}
+.z-0 {
+  z-index: 0;
+}
+
+/* --- Luxury Custom Scrollbar --- */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--accent-color), var(--stone-color));
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ivory-color);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--bg-color);
+}
+
+

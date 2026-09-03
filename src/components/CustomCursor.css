@@ -1,0 +1,48 @@
+body {
+  /* Hide the default cursor everywhere */
+  cursor: none !important;
+}
+
+/* Ensure no elements show their default pointer either */
+a, button, [style*="cursor: pointer"], .pointer {
+  cursor: none !important;
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-color, #d6c5b3);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  margin-top: -3px; /* Center the dot */
+  margin-left: -3px;
+  transition: transform 0.05s linear;
+}
+
+.custom-cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--accent-color, #d6c5b3);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  margin-top: -16px; /* Center the follower */
+  margin-left: -16px;
+  transition: width 0.3s, height 0.3s, margin 0.3s, background-color 0.3s;
+}
+
+.custom-cursor-follower.hover {
+  width: 48px;
+  height: 48px;
+  margin-top: -24px;
+  margin-left: -24px;
+  background-color: rgba(214, 197, 179, 0.1); /* Subtle fill on hover */
+  border-color: transparent;
+}
