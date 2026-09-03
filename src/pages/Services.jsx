@@ -30,6 +30,7 @@ function Services() {
         <title>Services | LuxurLive Kitchens & Wardrobes</title>
         <meta name="description" content="Explore our bespoke modular kitchen and custom luxury wardrobe services. LuxurLive delivers flawless craftsmanship and sophisticated design." />
         <meta name="keywords" content="Luxury Modular Kitchens, Custom Kitchen Design, Bespoke Wardrobe Design, LuxurLive Services" />
+        <link rel="canonical" href="https://luxurlive.com/services" />
       </Helmet>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');

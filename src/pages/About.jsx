@@ -30,6 +30,7 @@ function About() {
         <title>About LuxurLive | Bespoke Wardrobe & Kitchen Craftsmanship</title>
         <meta name="description" content="Learn about LuxurLive's philosophy. We specialize in luxury modular kitchens and custom bespoke wardrobes in Kozhikode." />
         <meta name="keywords" content="About LuxurLive, Luxury Wardrobes, Craftsmanship, Bespoke Kitchens, Premium Materials" />
+        <link rel="canonical" href="https://luxurlive.com/about" />
       </Helmet>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');

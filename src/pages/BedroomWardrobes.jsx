@@ -58,7 +58,8 @@ function BedroomWardrobes() {
       <Helmet>
         <title>Luxury Bedroom Wardrobes | LuxurLive</title>
         <meta name="description" content="Explore our bespoke luxury bedroom wardrobes. Discover custom architectural storage solutions that protect and display with uncompromising elegance." />
-        <meta name="keywords" content="Luxury Wardrobes, Bespoke Closets, Architectural Storage, Custom Wardrobes, Bedroom Closets" />
+        <meta name="keywords" content="Bespoke Wardrobes, Luxury Closets, Custom Wardrobe Design, Kozhikode Furniture" />
+        <link rel="canonical" href="https://luxurlive.com/wardrobes" />
         <link rel="preload" as="image" href="/wardrobe/download (2).jpeg" />
       </Helmet>
       <style>{`

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const testimonials = [
   {
@@ -26,6 +27,12 @@ const testimonials = [
 function Testimonials() {
   return (
     <div className="bg-background min-vh-100 py-5">
+      <Helmet>
+        <title>Client Testimonials | LuxurLive Kitchens & Wardrobes</title>
+        <meta name="description" content="Read testimonials from our satisfied clients about their bespoke modular kitchens and custom luxury wardrobes from LuxurLive." />
+        <meta name="keywords" content="LuxurLive Reviews, Client Testimonials, Luxury Kitchen Reviews, Wardrobe Testimonials" />
+        <link rel="canonical" href="https://luxurlive.com/testimonials" />
+      </Helmet>
       <div className="container" style={{ paddingTop: '100px', paddingBottom: '100px' }}>
         <h1 className="text-center mb-5" style={{ color: '#e5d3b3', fontFamily: '"Playfair Display", serif', fontSize: 'clamp(2.5rem, 4vw, 4rem)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
           Client Testimonials
