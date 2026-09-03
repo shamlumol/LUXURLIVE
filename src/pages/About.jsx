@@ -217,7 +217,7 @@ function About() {
         {/* Block 2: Text + Inset */}
         <div className="bento-block bg-charcoal" style={{ transitionDelay: '0.1s' }}>
           <div className="bento-content">
-            <h2 className="serif-heading">Luxury Design Philosophy</h2>
+            <h1 className="serif-heading">Luxury Design Philosophy</h1>
             <p className="paragraph">
               At LuxurLive, we believe true high-end wardrobe and kitchen design is found in the bespoke details — in premium scratch-resistant finishes, intelligent modular kitchen layouts, and luxury living spaces thoughtfully shaped around your lifestyle.
             </p>
