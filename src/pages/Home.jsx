@@ -269,11 +269,11 @@ function Home() {
           <div className="brand-subtitle">Kitchens &middot; Wardrobes</div>
           <div style={{ width: '40px', height: '2px', backgroundColor: '#cc0000', margin: '0.8rem auto 0' }}></div>
         </div>
-        <div className="brand-statement">
+        <h1 className="brand-statement">
           Where Craftsmanship Meets Luxury Living.<br />
           Bespoke kitchens and architectural wardrobes.<br />
           Precision engineering and timeless aesthetics.
-        </div>
+        </h1>
       </div>
 
       {/* RIGHT: Wardrobes */}
