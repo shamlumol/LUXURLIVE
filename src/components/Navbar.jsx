@@ -162,6 +162,8 @@ function Navbar() {
         <button
           className={`luxury-hamburger ${menuOpen ? 'open' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
         >
           <div className="hamburger-line"></div>
           <div className="hamburger-line"></div>
