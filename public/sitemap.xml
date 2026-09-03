@@ -6,13 +6,38 @@
       <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://luxurlive.com/kitchens</loc>
+      <loc>https://luxurlive.com/modular-kitchens</loc>
       <changefreq>monthly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://luxurlive.com/contact</loc>
+      <loc>https://luxurlive.com/wardrobes</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.9</priority>
+   </url>
+   <url>
+      <loc>https://luxurlive.com/services</loc>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://luxurlive.com/about</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://luxurlive.com/gallery</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://luxurlive.com/testimonials</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://luxurlive.com/contact</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
    </url>
 </urlset>
