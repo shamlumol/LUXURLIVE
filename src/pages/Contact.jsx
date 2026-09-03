@@ -292,24 +292,24 @@ function Contact() {
 
           <div className="form-row">
             <div className="form-group">
-              <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} className="form-input" placeholder="First Name" required />
+              <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} className="form-input" placeholder="First Name" aria-label="First Name" required />
             </div>
             <div className="form-group">
-              <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} className="form-input" placeholder="Last Name" required />
+              <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} className="form-input" placeholder="Last Name" aria-label="Last Name" required />
             </div>
           </div>
 
           <div className="form-row">
             <div className="form-group">
-              <input type="email" name="email" value={formData.email} onChange={handleChange} className="form-input" placeholder="Email Address" required />
+              <input type="email" name="email" value={formData.email} onChange={handleChange} className="form-input" placeholder="Email Address" aria-label="Email Address" required />
             </div>
             <div className="form-group">
-              <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="form-input" placeholder="Phone Number" />
+              <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="form-input" placeholder="Phone Number" aria-label="Phone Number" />
             </div>
           </div>
 
           <div className="form-group">
-            <select name="interest" value={formData.interest} onChange={handleChange} className="form-select" required>
+            <select name="interest" value={formData.interest} onChange={handleChange} className="form-select" aria-label="Area of Interest" required>
               <option value="" disabled hidden>Area of Interest</option>
               <option value="Modular Kitchen">Modular Kitchen</option>
               <option value="Luxury Wardrobe">Luxury Wardrobe</option>
@@ -318,7 +318,7 @@ function Contact() {
           </div>
 
           <div className="form-group">
-            <textarea name="message" value={formData.message} onChange={handleChange} className="form-textarea" placeholder="Tell us about your project..." rows="4" style={{ resize: 'none' }}></textarea>
+            <textarea name="message" value={formData.message} onChange={handleChange} className="form-textarea" placeholder="Tell us about your project..." aria-label="Message" rows="4" style={{ resize: 'none' }}></textarea>
           </div>
 
           <button type="submit" className="submit-btn">
