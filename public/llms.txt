@@ -1,0 +1,25 @@
+# LuxurLive
+
+> Premium Bespoke Modular Kitchens and Architectural Wardrobes in Kozhikode
+
+LuxurLive is a premium interior design and manufacturing firm specializing in high-end, bespoke modular kitchens and luxury wardrobes. Based in Kozhikode, Kerala, we blend architectural design with precision engineering to create timeless living spaces.
+
+## Products & Services
+- **Modular Kitchens**: Sculptural design meets precision engineering.
+- **Luxury Wardrobes**: Bespoke storage designed to protect and display with architectural elegance.
+- **Consultation**: Private design consultations available at our Kozhikode showroom.
+
+## Contact Information
+- **Email**: info@luxurlive.com
+- **Phone**: +91 999 561 1197
+- **Address**: C 58, Calicut architect collective building, 64/2132, St Vincent Colony Rd, Kozhikode, Kerala 673006, India
+- **Social**: Instagram: @luxurlive
+
+## Website Structure
+- `/` - Home Page
+- `/modular-kitchens` - Modular Kitchens Portfolio
+- `/wardrobes` - Luxury Wardrobes Portfolio
+- `/about` - About the Brand
+- `/services` - Our Services
+- `/testimonials` - Client Testimonials
+- `/contact` - Contact and Showroom details
