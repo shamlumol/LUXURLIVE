@@ -293,7 +293,7 @@ function ModularKitchens() {
             padding: 1.5rem !important;
             width: 280px !important; /* Very small rectangular box */
             max-width: 85vw !important;
-            background: rgba(255, 255, 255, 0.05) !important;
+            background: rgba(0, 0, 0, 0.5) !important;
             backdrop-filter: blur(10px) !important;
             -webkit-backdrop-filter: blur(20px) !important;
             border: 1px solid rgba(255, 255, 255, 0.08) !important;
