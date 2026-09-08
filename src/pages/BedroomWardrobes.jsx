@@ -311,26 +311,34 @@ function BedroomWardrobes() {
         
         .order-indicator {
           margin-top: 1.8rem;
-          display: flex;
+          display: inline-flex;
           align-items: center;
-          gap: 12px;
-          font-size: 9px;
-          letter-spacing: 0.3em;
+          gap: 8px;
+          font-size: 10px;
+          font-weight: 600;
+          letter-spacing: 0.15em;
           text-transform: uppercase;
-          color: rgba(255, 255, 255, 0.4);
-          transition: all 0.5s ease;
+          color: #c4a173;
+          border: 1px solid rgba(196, 161, 115, 0.4);
+          padding: 12px 24px;
+          border-radius: 30px;
+          background: rgba(0, 0, 0, 0.3);
+          transition: all 0.3s ease;
         }
         .order-indicator .line {
           height: 1px;
-          width: 0px;
-          background-color: #BFA054;
-          transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          width: 20px;
+          background-color: #c4a173;
+          transition: width 0.3s ease;
         }
         .interactive-card:hover .order-indicator {
-          color: #BFA054;
+          background: #c4a173;
+          border-color: #c4a173;
+          color: #000;
         }
         .interactive-card:hover .order-indicator .line {
-          width: 40px;
+          width: 30px;
+          background-color: #000;
         }
 
         @media (max-width: 768px) {
