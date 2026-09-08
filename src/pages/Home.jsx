@@ -89,11 +89,19 @@ function Home() {
         }
 
         .panel-explore {
+          display: inline-block;
+          margin-top: 1.5rem;
+          padding: 12px 30px;
           font-size: 11px;
           letter-spacing: 0.3em;
           text-transform: uppercase;
-          font-weight: 300;
-          opacity: 0.7;
+          font-weight: 400;
+          color: white;
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          background: rgba(0, 0, 0, 0.2);
+          backdrop-filter: blur(4px);
+          transition: all 0.3s ease;
+          opacity: 0.9;
         }
 
         /* Hover Interactions */
@@ -123,6 +131,12 @@ function Home() {
           opacity: 1;
           margin-bottom: 1.5rem;
           margin-top: 1rem;
+        }
+        
+        .side-panel:hover .panel-explore {
+          background: white;
+          color: black;
+          border-color: white;
         }
         
         /* Anchor text to the outer edges so it NEVER hits the glass */
@@ -258,7 +272,7 @@ function Home() {
         <div className="panel-content">
           <h2 className="panel-title">Modular Kitchens</h2>
           <div className="panel-subheading">Sculptural design meets precision engineering for the modern culinary space.</div>
-          <span className="panel-explore">Explore</span>
+          <span className="panel-explore">Explore Kitchens &rarr;</span>
         </div>
       </Link>
 
@@ -283,7 +297,7 @@ function Home() {
         <div className="panel-content">
           <h2 className="panel-title">Wardrobes</h2>
           <div className="panel-subheading">Bespoke storage designed to protect and display with architectural elegance.</div>
-          <span className="panel-explore">Explore</span>
+          <span className="panel-explore">Explore Wardrobes &rarr;</span>
         </div>
       </Link>
     </main>

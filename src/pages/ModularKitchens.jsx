@@ -113,6 +113,14 @@ function ModularKitchens() {
         .parallax-section.right-shade::before {
           background: linear-gradient(to right, rgba(0,0,0,0) 40%, rgba(0,0,0,0.85) 100%);
         }
+
+        /* Subtle background zoom on card hover */
+        .parallax-section .parallax-bg {
+          transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .parallax-section:has(.interactive-card:hover) .parallax-bg {
+          transform: scale(1.05);
+        }
         
         /* Small Rectangular Glass Cards */
         .small-glass-card {
@@ -205,6 +213,41 @@ function ModularKitchens() {
         .btn-luxury:hover {
           border-color: #BFA054;
           color: #BFA054;
+        }
+
+        /* Interactive Card Animations */
+        .interactive-card {
+          transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.6s ease, border-color 0.6s ease, background 0.6s ease;
+        }
+        .interactive-card:hover {
+          transform: translateY(-8px) scale(1.02);
+          box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.9), inset 0 0 40px rgba(191, 160, 84, 0.08);
+          border-color: rgba(191, 160, 84, 0.6);
+          background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .order-indicator {
+          margin-top: 1.8rem;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          font-size: 9px;
+          letter-spacing: 0.3em;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.4);
+          transition: all 0.5s ease;
+        }
+        .order-indicator .line {
+          height: 1px;
+          width: 0px;
+          background-color: #BFA054;
+          transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .interactive-card:hover .order-indicator {
+          color: #BFA054;
+        }
+        .interactive-card:hover .order-indicator .line {
+          width: 40px;
         }
 
         /* Scroll Animations */
@@ -329,13 +372,14 @@ function ModularKitchens() {
       <section className="parallax-section section-reveal">
         <div className="parallax-bg" style={{ backgroundImage: 'url("/veneer_finish_kitchen.jpeg")' }}></div>
         <div className="floating-subtitle right reveal-on-scroll">01 / Veneer Finish</div>
-        <div className="small-glass-card left reveal-on-scroll" onClick={() => navigate('/contact?model=Veneer Finish Kitchen (K-03)')} style={{ cursor: 'pointer' }}>
+        <div className="small-glass-card left interactive-card reveal-on-scroll" onClick={() => navigate('/contact?model=Veneer Finish Kitchen (K-03)')} style={{ cursor: 'pointer' }}>
           <span className="block-label">Model K-03</span>
           <h2 className="block-title">Veneer Finish Kitchen</h2>
           <h3 className="gold-text" style={{ fontSize: '1.1rem', marginBottom: '1rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Natural Wood Elegance</h3>
           <p className="block-description">
             Bring the warmth of nature indoors with our premium Veneer Finish Kitchen. Featuring distinctive natural wood grains and rich textures, this bespoke modular kitchen perfectly balances organic elegance with highly durable, modern architectural design.
           </p>
+          <div className="order-indicator"><span>Tap to Order</span><div className="line"></div></div>
         </div>
       </section>
 
@@ -343,13 +387,14 @@ function ModularKitchens() {
       <section className="parallax-section section-reveal">
         <div className="parallax-bg" style={{ backgroundImage: 'url("/pu_finish_kitchen.jpeg")' }}></div>
         <div className="floating-subtitle left reveal-on-scroll">02 / PU Finish</div>
-        <div className="small-glass-card right reveal-on-scroll" onClick={() => navigate('/contact?model=PU Finished Kitchen (K-02)')} style={{ cursor: 'pointer' }}>
+        <div className="small-glass-card right interactive-card reveal-on-scroll" onClick={() => navigate('/contact?model=PU Finished Kitchen (K-02)')} style={{ cursor: 'pointer' }}>
           <span className="block-label">Model K-02</span>
           <h2 className="block-title">PU Finished Kitchen</h2>
           <h3 className="gold-text" style={{ fontSize: '1.1rem', marginBottom: '1rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Seamless & Durable</h3>
           <p className="block-description">
             Experience flawless elegance with our PU Finished Kitchen. Coated with premium Polyurethane (PU), this model offers a luxurious, highly durable, and moisture-resistant surface. The seamless finish not only elevates your culinary space's aesthetic but also ensures long-lasting resilience against daily wear.
           </p>
+          <div className="order-indicator"><span>Tap to Order</span><div className="line"></div></div>
         </div>
       </section>
 
@@ -358,13 +403,14 @@ function ModularKitchens() {
         <div className="parallax-bg" style={{ backgroundImage: 'url("/acrylic_kitchen.jpeg")' }}></div>
 
         <div className="floating-subtitle right reveal-on-scroll">03 / Acrylic Finish</div>
-        <div className="small-glass-card left reveal-on-scroll" onClick={() => navigate('/contact?model=Acrylic Finish Kitchen (K-04)')} style={{ cursor: 'pointer' }}>
+        <div className="small-glass-card left interactive-card reveal-on-scroll" onClick={() => navigate('/contact?model=Acrylic Finish Kitchen (K-04)')} style={{ cursor: 'pointer' }}>
           <span className="block-label">Model K-04</span>
           <h2 className="block-title">Acrylic Finish Kitchen</h2>
           <h3 className="gold-text" style={{ fontSize: '1.1rem', marginBottom: '1rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Ultra-Modern High Gloss</h3>
           <p className="block-description">
             Achieve a stunning, ultra-modern look with our premium Acrylic Finish Kitchen. Boasting a high-gloss, mirror-like surface, this bespoke modular kitchen design reflects light beautifully to create a bright and spacious feel. Highly resistant to scratches and fading, the acrylic finish ensures your luxury kitchen remains vibrant and flawless for years.
           </p>
+          <div className="order-indicator"><span>Tap to Order</span><div className="line"></div></div>
         </div>
       </section>
 
@@ -372,13 +418,14 @@ function ModularKitchens() {
       <section className="parallax-section right-shade section-reveal">
         <div className="parallax-bg" style={{ backgroundImage: 'url("/Island_Kitchen.jpeg")' }}></div>
         <div className="floating-subtitle left reveal-on-scroll">04 / Island Kitchen</div>
-        <div className="small-glass-card right reveal-on-scroll" onClick={() => navigate('/contact?model=Bespoke Island Kitchen (K-01)')} style={{ cursor: 'pointer' }}>
+        <div className="small-glass-card right interactive-card reveal-on-scroll" onClick={() => navigate('/contact?model=Bespoke Island Kitchen (K-01)')} style={{ cursor: 'pointer' }}>
           <span className="block-label">Model K-01</span>
           <h2 className="block-title">Bespoke Island Kitchen</h2>
           <h3 className="gold-text" style={{ fontSize: '1.1rem', marginBottom: '1rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>The Ultimate Centerpiece</h3>
           <p className="block-description">
             Elevate your home with our premium luxury Island Kitchen. Designed as the ultimate centerpiece for modern, spacious open-plan layouts, this bespoke modular kitchen seamlessly blends gourmet cooking functionality with a highly social, elegant dining space.
           </p>
+          <div className="order-indicator"><span>Tap to Order</span><div className="line"></div></div>
         </div>
       </section>
 
@@ -386,13 +433,14 @@ function ModularKitchens() {
       <section className="parallax-section section-reveal">
         <div className="parallax-bg" style={{ backgroundImage: 'url("/laminate_kitchen.jpeg")' }}></div>
         <div className="floating-subtitle right reveal-on-scroll">05 / Laminate Finish</div>
-        <div className="small-glass-card left reveal-on-scroll" onClick={() => navigate('/contact?model=Laminate Kitchen (K-05)')} style={{ cursor: 'pointer' }}>
+        <div className="small-glass-card left interactive-card reveal-on-scroll" onClick={() => navigate('/contact?model=Laminate Kitchen (K-05)')} style={{ cursor: 'pointer' }}>
           <span className="block-label">Model K-05</span>
           <h2 className="block-title">Laminate Kitchen</h2>
           <h3 className="gold-text" style={{ fontSize: '1.1rem', marginBottom: '1rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Resilient & Versatile</h3>
           <p className="block-description">
             Discover the perfect blend of durability and luxury with our Laminate Finish Kitchen. Engineered for everyday resilience, this premium modular kitchen is highly resistant to heat, scratches, and moisture. Available in a vast array of bespoke textures and colors, the laminate finish offers unparalleled design flexibility for your modern home.
           </p>
+          <div className="order-indicator"><span>Tap to Order</span><div className="line"></div></div>
         </div>
       </section>
 
@@ -400,13 +448,14 @@ function ModularKitchens() {
       <section className="parallax-section section-reveal">
         <div className="parallax-bg" style={{ backgroundImage: 'url("/Glass_Shutter_Kitchen.jpeg")' }}></div>
         <div className="floating-subtitle left reveal-on-scroll">06 / Glass Shutter Finish</div>
-        <div className="small-glass-card right reveal-on-scroll" onClick={() => navigate('/contact?model=Glass Shutter Kitchen (K-06)')} style={{ cursor: 'pointer' }}>
+        <div className="small-glass-card right interactive-card reveal-on-scroll" onClick={() => navigate('/contact?model=Glass Shutter Kitchen (K-06)')} style={{ cursor: 'pointer' }}>
           <span className="block-label">Model K-06</span>
           <h2 className="block-title">Glass Shutter Kitchen</h2>
           <h3 className="gold-text" style={{ fontSize: '1.1rem', marginBottom: '1rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Sleek Visual Lightness</h3>
           <p className="block-description">
             Introduce unparalleled sophistication into your home with our premium Glass Shutter Kitchen. Designed to create a sleek, reflective visual lightness, this luxury modular kitchen showcases flawless glass-fronted cabinetry. The elegant transparent and frosted glass finishes naturally expand your space, embodying contemporary architectural character and bespoke kitchen craftsmanship.
           </p>
+          <div className="order-indicator"><span>Tap to Order</span><div className="line"></div></div>
         </div>
       </section>
 
@@ -421,6 +470,13 @@ function ModularKitchens() {
         </div>
       </section>
 
+      {/* Showroom Banner */}
+      <div className="reveal-on-scroll" style={{ marginTop: '5vw', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+        <Link to="/contact" style={{ display: 'block', textDecoration: 'none' }}>
+          <img decoding="async" fetchpriority="high" src="/about/showroom-full.png" alt="Calicut Architects Collective Showroom" style={{ width: '100%', height: 'auto', display: 'block' }} />
+        </Link>
+      </div>
+
       {/* Final Call to Action */}
       <section className="contact-block">
         <div className="reveal-on-scroll">
@@ -428,10 +484,13 @@ function ModularKitchens() {
           <p className="block-description mb-4" style={{ fontStyle: 'italic', color: '#BFA054' }}>
             LuxurLive — Where Craftsmanship Meets Luxury Living.
           </p>
-          <p className="block-description" style={{ fontSize: '13px', maxWidth: '400px', margin: '0 auto' }}>
-            Download our exclusive kitchen brochure to explore our full range of bespoke designs, premium finishes, and luxury architectural solutions tailored for your home.
+          <p className="block-description" style={{ fontSize: '16px', maxWidth: '600px', margin: '0 auto' }}>
+            Schedule a private consultation with our architectural designers to begin drafting your bespoke culinary space.
           </p>
-          <a href="/kitchen-brochure.pdf" download className="btn-luxury">Download Kitchen Brochure ↓</a>
+          <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '40px' }}>
+          <Link to="/contact" className="btn-luxury" style={{ marginTop: '0' }}>Schedule Showroom Visit &rarr;</Link>
+          <a href="/kitchen-brochure.pdf" download className="btn-luxury" style={{ marginTop: '0' }}>Download Brochure &darr;</a>
+        </div>
         </div>
       </section>
 

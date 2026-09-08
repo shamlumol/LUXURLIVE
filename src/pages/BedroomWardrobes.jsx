@@ -151,6 +151,14 @@ function BedroomWardrobes() {
           background: linear-gradient(to right, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0) 100%);
         }
         
+        /* Subtle background zoom on card hover */
+        .parallax-section .parallax-bg {
+          transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .parallax-section:has(.interactive-card:hover) .parallax-bg {
+          transform: scale(1.05);
+        }
+
         /* Small Rectangular Glass Cards */
         .small-glass-card {
           background: rgba(255, 255, 255, 0);
@@ -290,6 +298,41 @@ function BedroomWardrobes() {
           color: black;
         }
 
+        /* Interactive Card Animations */
+        .interactive-card {
+          transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.6s ease, border-color 0.6s ease, background 0.6s ease;
+        }
+        .interactive-card:hover {
+          transform: translateY(-8px) scale(1.02);
+          box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.9), inset 0 0 40px rgba(191, 160, 84, 0.08);
+          border-color: rgba(191, 160, 84, 0.6);
+          background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .order-indicator {
+          margin-top: 1.8rem;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          font-size: 9px;
+          letter-spacing: 0.3em;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.4);
+          transition: all 0.5s ease;
+        }
+        .order-indicator .line {
+          height: 1px;
+          width: 0px;
+          background-color: #BFA054;
+          transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .interactive-card:hover .order-indicator {
+          color: #BFA054;
+        }
+        .interactive-card:hover .order-indicator .line {
+          width: 40px;
+        }
+
         @media (max-width: 768px) {
           .kitchen-hero, .parallax-section {
             min-height: 100vh !important;
@@ -371,6 +414,8 @@ function BedroomWardrobes() {
             padding: 5vh 5%;
           }
         }
+
+
       `}</style>
 
       {/* Hero Section */}
@@ -400,13 +445,14 @@ function BedroomWardrobes() {
       <section className="parallax-section section-reveal">
         <div className="parallax-bg" style={{ backgroundImage: 'url("/wardrobe/walk_in_ward.jpeg")' }}></div>
         <div className="floating-subtitle left reveal-on-scroll">01 / Walk-in</div>
-        <div className="small-glass-card right reveal-on-scroll" onClick={() => navigate('/contact?model=Walk-in Wardrobe (W-01)')} style={{ cursor: 'pointer' }}>
+        <div className="small-glass-card right interactive-card reveal-on-scroll" onClick={() => navigate('/contact?model=Walk-in Wardrobe (W-01)')} style={{ cursor: 'pointer' }}>
           <span className="block-label">MODEL W-01</span>
           <h2 className="block-title">Walk-in Wardrobe</h2>
           <h3 className="gold-text" style={{ fontSize: '1.1rem', marginBottom: '1rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>The Ultimate Dressing Room</h3>
           <p className="block-description">
             Elevate your lifestyle with our premium luxury walk-in wardrobe designs. Expertly crafted as a bespoke dressing room, these high-end custom storage solutions offer expansive boutique-style displays, modular shelving, and elegant organization for your entire collection.
           </p>
+          <div className="order-indicator"><span>Tap to Order</span><div className="line"></div></div>
         </div>
       </section>
 
@@ -414,13 +460,14 @@ function BedroomWardrobes() {
       <section className="parallax-section left-shade section-reveal">
         <div className="parallax-bg" style={{ backgroundImage: 'url("/wardrobe/Glass_Profile_Ward.jpg")' }}></div>
         <div className="floating-subtitle right reveal-on-scroll">02 / Glass Profile</div>
-        <div className="small-glass-card left reveal-on-scroll" onClick={() => navigate('/contact?model=Glass Profile Wardrobe (W-02)')} style={{ cursor: 'pointer' }}>
+        <div className="small-glass-card left interactive-card reveal-on-scroll" onClick={() => navigate('/contact?model=Glass Profile Wardrobe (W-02)')} style={{ cursor: 'pointer' }}>
           <span className="block-label">MODEL W-02</span>
           <h2 className="block-title">Glass Profile Wardrobe</h2>
           <h3 className="gold-text" style={{ fontSize: '1.1rem', marginBottom: '1rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Modern Architectural Elegance</h3>
           <p className="block-description">
             Showcase your apparel with our custom glass profile wardrobes. Featuring exquisite tinted and fluted glass closet doors framed in minimalist metal, this luxury bedroom storage design offers built-in ambient lighting and stunning visual depth for a truly modern modular wardrobe experience.
           </p>
+          <div className="order-indicator"><span>Tap to Order</span><div className="line"></div></div>
         </div>
       </section>
 
@@ -428,13 +475,14 @@ function BedroomWardrobes() {
       <section className="parallax-section section-reveal">
         <div className="parallax-bg" style={{ backgroundImage: 'url("/wardrobe/sliding_glass_ward.jpg")' }}></div>
         <div className="floating-subtitle left reveal-on-scroll">03 / Sliding Glass</div>
-        <div className="small-glass-card right reveal-on-scroll" onClick={() => navigate('/contact?model=Sliding Glass Wardrobe (W-03)')} style={{ cursor: 'pointer' }}>
+        <div className="small-glass-card right interactive-card reveal-on-scroll" onClick={() => navigate('/contact?model=Sliding Glass Wardrobe (W-03)')} style={{ cursor: 'pointer' }}>
           <span className="block-label">MODEL W-03</span>
           <h2 className="block-title">Sliding Glass Wardrobe</h2>
           <h3 className="gold-text" style={{ fontSize: '1.1rem', marginBottom: '1rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Seamless Spatial Optimization</h3>
           <p className="block-description">
             Maximize your bedroom floor plan with our premium sliding glass wardrobes. Engineered with space-saving soft-close sliding closet doors and whisper-quiet tracks, these bespoke reflective sliding wardrobes deliver a flawless, high-end aesthetic while optimizing your master bedroom storage.
           </p>
+          <div className="order-indicator"><span>Tap to Order</span><div className="line"></div></div>
         </div>
       </section>
 
@@ -442,13 +490,14 @@ function BedroomWardrobes() {
       <section className="parallax-section left-shade section-reveal">
         <div className="parallax-bg crop-bottom" style={{ backgroundImage: 'url("/wardrobe/Sliding_Laminate_Ward.jpg")' }}></div>
         <div className="floating-subtitle right reveal-on-scroll">04 / Sliding Laminate</div>
-        <div className="small-glass-card left reveal-on-scroll" onClick={() => navigate('/contact?model=Sliding Laminate Wardrobe (W-04)')} style={{ cursor: 'pointer' }}>
+        <div className="small-glass-card left interactive-card reveal-on-scroll" onClick={() => navigate('/contact?model=Sliding Laminate Wardrobe (W-04)')} style={{ cursor: 'pointer' }}>
           <span className="block-label">MODEL W-04</span>
           <h2 className="block-title">Sliding Laminate Wardrobe</h2>
           <h3 className="gold-text" style={{ fontSize: '1.1rem', marginBottom: '1rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Textured Premium Finishes</h3>
           <p className="block-description">
             Experience exceptional durability with our bespoke sliding laminate wardrobes. Crafted from premium Italian laminates, rich wood grains, and matte nanotech finishes, these scratch-resistant sliding closet doors offer a highly durable, sophisticated, and customizable wardrobe storage solution.
           </p>
+          <div className="order-indicator"><span>Tap to Order</span><div className="line"></div></div>
         </div>
       </section>
 
@@ -456,13 +505,14 @@ function BedroomWardrobes() {
       <section className="parallax-section section-reveal">
         <div className="parallax-bg" style={{ backgroundImage: 'url("/wardrobe/fabric_profile_ward.jpg")' }}></div>
         <div className="floating-subtitle left reveal-on-scroll">05 / Fabric Profile</div>
-        <div className="small-glass-card right reveal-on-scroll" onClick={() => navigate('/contact?model=Fabric Profile Wardrobe (W-05)')} style={{ cursor: 'pointer' }}>
+        <div className="small-glass-card right interactive-card reveal-on-scroll" onClick={() => navigate('/contact?model=Fabric Profile Wardrobe (W-05)')} style={{ cursor: 'pointer' }}>
           <span className="block-label">MODEL W-05</span>
           <h2 className="block-title">Fabric Profile Wardrobe</h2>
           <h3 className="gold-text" style={{ fontSize: '1.1rem', marginBottom: '1rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Tactile Sensory Luxury</h3>
           <p className="block-description">
             Introduce warmth into your master suite with our exclusive upholstered fabric profile wardrobes. A pinnacle of high-end wardrobe styling, these luxury tactile closet doors feature premium acoustic textiles encased in minimal frames, delivering a uniquely inviting bespoke bedroom wardrobe finish.
           </p>
+          <div className="order-indicator"><span>Tap to Order</span><div className="line"></div></div>
         </div>
       </section>
 
@@ -488,6 +538,13 @@ function BedroomWardrobes() {
         </div>
       </section>
 
+      {/* Showroom Banner */}
+      <div className="reveal-on-scroll" style={{ marginTop: '5vw', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+        <Link to="/contact" style={{ display: 'block', textDecoration: 'none' }}>
+          <img decoding="async" fetchpriority="high" src="/about/showroom-full.png" alt="Calicut Architects Collective Showroom" style={{ width: '100%', height: 'auto', display: 'block' }} />
+        </Link>
+      </div>
+
       {/* Final Call to Action */}
       <section className="contact-block section-reveal">
         <span className="block-label">Your Sanctuary</span>
@@ -495,7 +552,10 @@ function BedroomWardrobes() {
         <p className="block-description" style={{ maxWidth: '600px', margin: '0 auto', fontSize: '16px' }}>
           Schedule a private consultation with our architectural designers to begin drafting your bespoke storage solution.
         </p>
-        <a href="/wardrobe-brochure.pdf" download className="contact-btn">Download Wardrobe Brochure ↓</a>
+        <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '2rem' }}>
+          <Link to="/contact" className="contact-btn" style={{ marginTop: '0' }}>Schedule Showroom Visit &rarr;</Link>
+          <a href="/wardrobe-brochure.pdf" download className="contact-btn" style={{ marginTop: '0' }}>Download Brochure &darr;</a>
+        </div>
       </section>
 
     </div>

@@ -247,12 +247,9 @@ function About() {
         </div>
 
         {/* Block 5: Center Brand Logo */}
-        <div className="bento-block bg-bronze brand-logo-block" style={{ transitionDelay: '0.2s' }}>
-          <div className="bento-content center">
-            <img loading="lazy" decoding="async" src="/logo.png" alt="LuxurLive Bespoke Kitchens and Wardrobes" style={{ height: '50px', objectFit: 'contain' }} />
-            <div className="brand-subtitle">Kitchens &middot; Wardrobes</div>
-
-            <div style={{ width: '50px', height: '1px', background: 'rgba(255,255,255,0.2)', margin: '2rem auto 0' }}></div>
+        <div className="bento-block brand-logo-block" style={{ transitionDelay: '0.2s', backgroundColor: '#ffffff' }}>
+          <div className="bento-content center" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem' }}>
+            <img loading="lazy" decoding="async" src="/cac-logo.png" alt="Calicut Architects Collective" style={{ width: '100%', maxWidth: '600px', height: 'auto', objectFit: 'contain' }} />
           </div>
         </div>
 
@@ -306,6 +303,9 @@ function About() {
         </div>
 
       </div>
+
+
+
     </div>
   );
 }
