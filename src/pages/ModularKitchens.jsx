@@ -344,6 +344,113 @@ function ModularKitchens() {
 
 
         }
+        .showroom-banner-mobile {
+          display: none;
+        }
+
+        .showroom-banner-desktop {
+          margin-top: 5vw;
+          width: 100%;
+          position: relative;
+          background-color: #000;
+          display: flex;
+          align-items: center;
+          border-top: 1px solid rgba(255,255,255,0.05);
+          overflow: hidden;
+        }
+        
+        .showroom-bg-image {
+          width: 100%;
+          height: auto;
+          display: block;
+          object-fit: contain;
+        }
+
+        .showroom-text-overlay {
+          position: absolute;
+          left: 6vw;
+          max-width: 550px;
+          background: rgba(0, 0, 0, 0.4);
+          backdrop-filter: blur(4px);
+          padding: 40px;
+          border-radius: 4px;
+          z-index: 2;
+        }
+
+        .showroom-subtitle {
+          font-size: 0.8rem;
+          letter-spacing: 0.4em;
+          color: #c4a173;
+          margin-bottom: 1.5rem;
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+        }
+        
+        .showroom-subtitle::after {
+          content: "";
+          display: block;
+          width: 60px;
+          height: 1px;
+          background-color: #c4a173;
+          margin-left: 15px;
+        }
+
+        .showroom-title {
+          font-family: 'Playfair Display', serif;
+          font-size: clamp(2.2rem, 3.5vw, 3.5rem);
+          font-weight: 400;
+          letter-spacing: 0.05em;
+          line-height: 1.1;
+          color: #ffffff;
+          margin-bottom: 1rem;
+          text-transform: uppercase;
+        }
+
+        .showroom-desc {
+          font-size: 1.1rem;
+          color: rgba(255,255,255,0.9);
+          margin-bottom: 3rem;
+          font-weight: 300;
+          letter-spacing: 0.05em;
+        }
+
+        .showroom-footer {
+          display: flex;
+          align-items: center;
+          font-size: 0.8rem;
+          letter-spacing: 0.2em;
+          color: rgba(255,255,255,0.8);
+          line-height: 1.6;
+        }
+        
+        .showroom-button {
+          display: inline-block; 
+          padding: 12px 30px; 
+          border: 1px solid #c4a173; 
+          color: #000; 
+          background-color: #c4a173; 
+          text-decoration: none; 
+          text-transform: uppercase; 
+          letter-spacing: 0.15em; 
+          font-size: 0.75rem; 
+          font-weight: 500; 
+          transition: all 0.3s ease;
+        }
+        
+        .showroom-button:hover {
+          background-color: transparent; 
+          color: #c4a173;
+        }
+
+        @media (max-width: 900px) {
+          .showroom-banner-desktop {
+            display: none;
+          }
+          .showroom-banner-mobile {
+            display: block;
+          }
+        }
       `}</style>
 
       {/* Hero Section */}
@@ -470,8 +577,29 @@ function ModularKitchens() {
         </div>
       </section>
 
-      {/* Showroom Banner */}
-      <div className="reveal-on-scroll" style={{ marginTop: '5vw', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+      {/* Showroom Banner (Desktop) */}
+      <div className="showroom-banner-desktop reveal-on-scroll">
+        <img loading="lazy" decoding="async" src="/about/showroom-bg.png" alt="Calicut Architects Collective Showroom" className="showroom-bg-image" />
+        <div className="showroom-text-overlay">
+          <div className="showroom-subtitle">SHOWROOM AT</div>
+          <h2 className="showroom-title">THE CALICUT<br/>ARCHITECTS COLLECTIVE</h2>
+          <p className="showroom-desc">The Indian Institute of Architects &ndash; Calicut Centre</p>
+          <div className="showroom-footer" style={{ marginBottom: '2rem' }}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c4a173" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '20px', flexShrink: 0}}>
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>
+              AN ADDRESS OF TRUST<br/>
+              FOR ARCHITECTS & HOMEOWNERS
+            </span>
+          </div>
+          <Link to="/contact" className="showroom-button">Schedule Showroom Visit &rarr;</Link>
+        </div>
+      </div>
+
+      {/* Showroom Banner (Mobile) */}
+      <div className="showroom-banner-mobile reveal-on-scroll" style={{ marginTop: '5vw', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
         <Link to="/contact" style={{ display: 'block', textDecoration: 'none' }}>
           <img decoding="async" fetchpriority="high" src="/about/showroom-full.png" alt="Calicut Architects Collective Showroom" style={{ width: '100%', height: 'auto', display: 'block' }} />
         </Link>
