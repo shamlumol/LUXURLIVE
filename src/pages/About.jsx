@@ -269,12 +269,15 @@ function About() {
           </div>
         </div>
 
-        {/* Block 6: Large Text */}
+        {/* Block 6: Large Text + Dynamic Image */}
         <div className="bento-block bg-charcoal" style={{ transitionDelay: '0.3s' }}>
-          <div className="bento-content center">
-            <h2 className="serif-large">
+          <div className="bento-content center" style={{ justifyContent: 'space-between', padding: '3rem', display: 'flex', flexDirection: 'column' }}>
+            <h2 className="serif-large" style={{ flexShrink: 0, fontSize: 'clamp(1.8rem, 2.5vw, 2.5rem)', marginBottom: '2rem' }}>
               Transform Your Space With Luxury Modular Kitchens & Bespoke Wardrobes
             </h2>
+            <div style={{ display: 'flex', flexDirection: 'column', flexGrow: 1, width: '100%', overflow: 'hidden' }}>
+              <img loading="lazy" decoding="async" src="/kitchen_detail_3.jpeg" alt="Luxury Modular Kitchen Details" style={{ width: '100%', flexGrow: 1, objectFit: 'cover', minHeight: 0, borderRadius: '4px' }} />
+            </div>
           </div>
         </div>
 
