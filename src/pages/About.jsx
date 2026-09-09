@@ -247,8 +247,8 @@ function About() {
                  From hand-selected materials to master craftsmanship, every element is meticulously considered to create enduring luxury.
                </p>
             </div>
-            <div style={{ marginTop: 'auto' }}>
-              <img loading="lazy" decoding="async" src="/about/wardrobe_detail_7.jpeg" alt="LuxurLive Wardrobe Manufacturing Craftsmanship" className="inset-image" style={{ marginBottom: '1.5rem' }} />
+            <div style={{ display: 'flex', flexDirection: 'column', flexGrow: 1, marginTop: '1rem' }}>
+              <img loading="lazy" decoding="async" src="/about/wardrobe_detail_7.jpeg" alt="LuxurLive Wardrobe Manufacturing Craftsmanship" className="inset-image" style={{ marginBottom: '1.5rem', flexGrow: 1, maxHeight: 'none', objectFit: 'cover' }} />
               <h2 className="serif-heading" style={{ margin: 0, fontSize: 'clamp(1.5rem, 2vw, 2.2rem)' }}>Designing<br />Excellence</h2>
             </div>
           </div>
