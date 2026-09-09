@@ -240,9 +240,17 @@ function About() {
         {/* ROW 2 */}
         {/* Block 4: Title + Inset */}
         <div className="bento-block bg-black" style={{ transitionDelay: '0.1s' }}>
-          <div className="bento-content flex-end">
-            <img loading="lazy" decoding="async" src="/about/wardrobe_detail_7.jpeg" alt="LuxurLive Wardrobe Manufacturing Craftsmanship" className="inset-image" />
-            <h2 className="serif-heading" style={{ margin: 0 }}>Designing<br />Excellence</h2>
+          <div className="bento-content flex-end" style={{ justifyContent: 'space-between' }}>
+            <div>
+               <h3 style={{ fontFamily: 'Playfair Display', fontSize: '1.5rem', color: '#BFA054', margin: 0, marginBottom: '1rem', fontWeight: 400, fontStyle: 'italic' }}>Precision in Every Detail</h3>
+               <p className="paragraph" style={{ fontSize: '0.9rem', marginBottom: '2rem' }}>
+                 From hand-selected materials to master craftsmanship, every element is meticulously considered to create enduring luxury.
+               </p>
+            </div>
+            <div style={{ marginTop: 'auto' }}>
+              <img loading="lazy" decoding="async" src="/about/wardrobe_detail_7.jpeg" alt="LuxurLive Wardrobe Manufacturing Craftsmanship" className="inset-image" style={{ marginBottom: '1.5rem' }} />
+              <h2 className="serif-heading" style={{ margin: 0, fontSize: 'clamp(1.5rem, 2vw, 2.2rem)' }}>Designing<br />Excellence</h2>
+            </div>
           </div>
         </div>
 
