@@ -247,9 +247,17 @@ function About() {
         </div>
 
         {/* Block 5: Center Brand Logo */}
-        <div className="bento-block brand-logo-block" style={{ transitionDelay: '0.2s', backgroundColor: '#ffffff' }}>
-          <div className="bento-content center" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem' }}>
-            <img loading="lazy" decoding="async" src="/cac-logo.png" alt="Calicut Architects Collective" style={{ width: '100%', maxWidth: '600px', height: 'auto', objectFit: 'contain' }} />
+        <div className="bento-block brand-logo-block" style={{ transitionDelay: '0.2s', backgroundColor: '#000000' }}>
+          <div className="bento-content center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '3rem' }}>
+            <span className="block-label" style={{ marginBottom: '1rem', color: '#BFA054' }}>Our Association</span>
+            <h2 className="serif-heading" style={{ fontSize: 'clamp(1.8rem, 2vw, 2.5rem)', marginBottom: '1rem', color: '#ffffff', textTransform: 'none' }}>In the Company of Architects</h2>
+            <p className="paragraph" style={{ marginBottom: '2.5rem', maxWidth: '450px', fontStyle: 'italic' }}>
+              Proudly associated with the Indian Institute of Architects Calicut Centre, standing alongside the finest visionaries in architectural design.
+            </p>
+            <img loading="lazy" decoding="async" src="/iia-logo.png" alt="The Indian Institute of Architects Calicut Centre" style={{ width: '100%', maxWidth: '350px', height: 'auto', objectFit: 'contain', marginBottom: '2rem' }} />
+            <span style={{ display: 'block', fontSize: '0.75rem', letterSpacing: '0.3em', color: '#c4a173', textTransform: 'uppercase' }}>
+              Built around design, connected by trust
+            </span>
           </div>
         </div>
 
